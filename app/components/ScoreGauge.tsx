@@ -15,7 +15,7 @@ const ScoreGauge = ({ score = 75 }: { score: number }) => {
     return (
         <div className="flex flex-col items-center">
             <div className="relative w-40 h-20">
-                <svg viewBox="0 0 100 50" className="w-full h-full">
+                <svg viewBox="0 0 100 50" className="w-full h-full drop-shadow-lg">
                     <defs>
                         <linearGradient
                             id="gaugeGradient"
@@ -24,8 +24,8 @@ const ScoreGauge = ({ score = 75 }: { score: number }) => {
                             x2="100%"
                             y2="0%"
                         >
-                            <stop offset="0%" stopColor="#a78bfa" />
-                            <stop offset="100%" stopColor="#fca5a5" />
+                            <stop offset="0%" stopColor="#818cf8" />
+                            <stop offset="100%" stopColor="#f472b6" />
                         </linearGradient>
                     </defs>
 
@@ -33,7 +33,7 @@ const ScoreGauge = ({ score = 75 }: { score: number }) => {
                     <path
                         d="M10,50 A40,40 0 0,1 90,50"
                         fill="none"
-                        stroke="#e5e7eb"
+                        stroke="#ffffff10"
                         strokeWidth="10"
                         strokeLinecap="round"
                     />
@@ -48,11 +48,12 @@ const ScoreGauge = ({ score = 75 }: { score: number }) => {
                         strokeLinecap="round"
                         strokeDasharray={pathLength}
                         strokeDashoffset={pathLength * (1 - percentage)}
+                        className="transition-all duration-1000 ease-out"
                     />
                 </svg>
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center pt-2">
-                    <div className="text-xl font-semibold pt-4">{score}/100</div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center pt-6">
+                    <div className="text-3xl font-bold tracking-tight text-white">{score}</div>
                 </div>
             </div>
         </div>
