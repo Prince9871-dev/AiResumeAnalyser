@@ -178,7 +178,7 @@ Planned future upgrades:
 
 ## 👨‍💻 Author
 
-**Manvendra Negi**
+**Prince jha**
 
 GitHub: https://github.com/Prince9871-dev
 
